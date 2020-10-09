@@ -1,0 +1,31 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+
+    background: rebeccapurple;
+    color: white;
+    font-family: Helvetica;
+    font-weight: 300;
+}
+
+.navbar-item a{
+    padding: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+}
+
+.search-bar span{
+    vertical-align: middle;
+    font-size: 22px;
+    padding-right: 5px;
+}
+
+.search-bar input{
+    font-size: 18px;
+    height: 30px;
+    width: 200px;
+}

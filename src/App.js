@@ -1,11 +1,27 @@
 import React from 'react';
 import './App.css';
+import RecipeList from "./components/RecipeList";
+import { Route, Switch} from 'react-router-dom';
+import RecipeDetail from "./components/RecipeDetail";
 
 function App() {
   return (
-    <div>
-      <h1>Recipe App</h1>
-    </div>
+    <Switch>
+      <Route exact
+             path="/"
+             render={(routeProps) => <RecipeList {...routeProps}/>}
+      />
+      <Route exact
+             path="/recipe/newRecipe"
+             render={routeProps =>
+                 <RecipeDetail isNew={true} {...routeProps}/>}
+      />
+      <Route exact
+             path="/recipe/:id"
+             render={routeProps =>
+                 <RecipeDetail isNew={false} recipe_id={routeProps.match.params.id}/>}
+      />
+    </Switch>
   );
 }
 
